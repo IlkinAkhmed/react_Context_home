@@ -1,0 +1,72 @@
+.wishlist {
+    width: 450px;
+    height: 100vh;
+    overflow-y: scroll;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: white;
+    border-left: 1px solid gray;
+    padding: 20px;
+    transform: translateX(450px);
+    transition: 0.5s ease-in-out;
+}
+.wishlist .wrapper{
+    width: 100%;
+}
+
+.wishlist .wrapper .card {
+    width: 100%;
+    cursor: pointer;
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 200px;
+
+
+}
+.wishlist .wrapper .card .image {
+    position: relative;
+    overflow: hidden;
+    width: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.wishlist .wrapper .card .image img {
+    width: 100%;
+
+}
+
+.wishlist .wrapper .card .texts {
+    padding: 0px 0;
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #c96;
+
+}
+
+.wishlist .wrapper .card .texts b{
+    color: rgb(203, 35, 35);
+}
+.active{
+    transform: translateX(0);
+    transition: 0.5s ease-in-out;
+}
+.fa-xmark{
+    font-size: 20px;
+    cursor: pointer;
+    margin-bottom: 20px;
+}
+.fa-trash-can{
+    transition: 0.3s;
+}
+.fa-trash-can:hover{
+    color: #c96;
+    transform: scale(1.3);
+    transition: 0.3s;
+}
