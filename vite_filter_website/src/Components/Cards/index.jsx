@@ -3,6 +3,7 @@ import { Shopcontext } from '../../Context/ShopContext'
 import { Context } from '../../Context/WishlistContext'
 import useFetch from '../../Hooks/UseFetch'
 import "./index.css"
+import Swal from 'sweetalert2'
 
 function Cards() {
 
@@ -19,9 +20,17 @@ function Cards() {
     function addWishlist(item) {
         const find = favs.find((x) => x.id === item.id)
         if (find) {
+            Swal.fire({
+                title: "Already in wishlist!!!",
+                icon: "error"
+              });
             return
         } else {
             setFavs([...favs, { ...item }])
+            Swal.fire({
+                title: "Added to wishlist!",
+                icon: "success"
+              });
         }
     }
 
